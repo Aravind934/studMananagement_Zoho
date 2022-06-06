@@ -5,23 +5,48 @@ import Enum.*;
 import java.util.ArrayList;
 
 public class Staff {
-    private final String name;
-    private final Department department;
-    private ArrayList<Subject> handlingsubjects = new ArrayList<Subject>();
 
-    public Staff(String name, Department department, Subject[] subjects) {
+    private int id;
+    private String name;
+    private Department department;
+    private ArrayList<Subject> handlingSubjects = new ArrayList<Subject>();
+
+    public void setName(String name) {
         this.name = name;
-        this.department = department;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setDepartment(Department depName) {
+        this.department = depName;
+    }
+
+    public void setSubjects(ArrayList<Subject> subjects) {
         for (Subject sub : subjects) {
-            this.handlingsubjects.add(sub);
+            this.handlingSubjects.add(sub);
         }
     }
 
-    public ArrayList<Subject> getHabndlingubjects() {
-        return this.handlingsubjects;
+    public int getId() {
+        return this.id;
     }
 
+    public ArrayList<Subject> getHandlingSubject() {
+        return this.handlingSubjects;
+    }
+
+    public String getName() {
+        return this.name;
+    }
+
+    public Department getDepartment() {
+        return this.department;
+    }
+
+
     public String toString() {
-        return "Staff Name: " + this.name;
+        return "Staff Name: " + this.name + " Department name:" + this.department;
     }
 }

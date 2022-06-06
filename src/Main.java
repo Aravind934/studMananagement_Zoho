@@ -1,9 +1,11 @@
+import DB.DbConnection;
 import Helper.*;
+import SchoolEntity.Management;
 
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         Scanner input = new Scanner(System.in);
         Helper helper = new Helper();
         boolean isClose = true;

@@ -1,5 +1,5 @@
 package Enum;
 
 public enum Department {
-    CS, TAMIL, ENGLISH, PHYSICS
+    CS, TAMIL(), ENGLISH, PHYSICS
 }
